@@ -8,8 +8,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories
 public class WhiskyRegistryServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(WhiskyRegistryServiceApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(WhiskyRegistryServiceApplication.class, args);
+  }
 }
