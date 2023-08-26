@@ -1,6 +1,7 @@
 package pl.szymhu.whiskyregistryservice.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,14 @@ public class WhiskyService {
 
   public List<Whisky> getAll() {
     return whiskyRepository.findAll();
+  }
+
+  public Optional<Whisky> getWhiskyWithId(UUID id) {
+    return whiskyRepository.findById(id.toString());
+  }
+
+  public void add(Whisky whisky) {
+    whiskyRepository.save(whisky);
   }
 
   public void generateSomeWhiskies() {
